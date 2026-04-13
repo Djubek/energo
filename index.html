@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="sk">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profinstal – Spoľahlivé inštalácie pre váš domov</title>
-  <meta name="description" content="Kúrenie, voda, elektrina aj plyn — profesionálne inštalácie a servis na Orave. Zavolajte: +421 949 104 281">
+  <meta name="description"
+    content="Kúrenie, voda, elektrina aj plyn — profesionálne inštalácie a servis na Orave. Zavolajte: +421 949 104 281">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+    rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
-      --orange:        #F5A623;
-      --orange-dark:   #C8851A;
-      --orange-light:  #FFF8EC;
+      --orange: #F5A623;
+      --orange-dark: #C8851A;
+      --orange-light: #FFF8EC;
       --orange-border: #FDECC8;
-      --black:         #141414;
-      --dark:          #1C1C1C;
-      --gray:          #6B7280;
-      --gray-light:    #9CA3AF;
-      --light:         #F6F6F4;
-      --white:         #FFFFFF;
-      --border:        #E5E7EB;
-      --font-h:  'Outfit', sans-serif;
-      --font-b:  'DM Sans', sans-serif;
+      --black: #141414;
+      --dark: #1C1C1C;
+      --gray: #6B7280;
+      --gray-light: #9CA3AF;
+      --light: #F6F6F4;
+      --white: #FFFFFF;
+      --border: #E5E7EB;
+      --font-h: 'Outfit', sans-serif;
+      --font-b: 'DM Sans', sans-serif;
       --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
       --ease-move: cubic-bezier(0.25, 1, 0.5, 1);
     }
 
-    html { font-size: 16px; scroll-behavior: smooth; }
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: var(--font-b);
@@ -39,35 +52,96 @@
       overflow-x: hidden;
     }
 
-    img { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    button { font-family: inherit; cursor: pointer; border: none; background: none; }
-    ul, ol { list-style: none; }
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
 
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 1.25rem;
     }
-    @media (min-width: 768px) { .container { padding: 0 2rem; } }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 2rem;
+      }
+    }
 
     /* ── SCROLL REVEAL ── */
-    .reveal, .reveal-l, .reveal-r {
+    .reveal,
+    .reveal-l,
+    .reveal-r {
       opacity: 0;
       transition: opacity 0.65s var(--ease-out), transform 0.65s var(--ease-out);
     }
-    .reveal       { transform: translateY(22px); }
-    .reveal-l     { transform: translateX(-22px); }
-    .reveal-r     { transform: translateX(22px); }
-    .reveal.on, .reveal-l.on, .reveal-r.on { opacity: 1; transform: none; }
-    .d1 { transition-delay: 0.08s; }
-    .d2 { transition-delay: 0.16s; }
-    .d3 { transition-delay: 0.24s; }
-    .d4 { transition-delay: 0.32s; }
-    .d5 { transition-delay: 0.40s; }
+
+    .reveal {
+      transform: translateY(22px);
+    }
+
+    .reveal-l {
+      transform: translateX(-22px);
+    }
+
+    .reveal-r {
+      transform: translateX(22px);
+    }
+
+    .reveal.on,
+    .reveal-l.on,
+    .reveal-r.on {
+      opacity: 1;
+      transform: none;
+    }
+
+    .d1 {
+      transition-delay: 0.08s;
+    }
+
+    .d2 {
+      transition-delay: 0.16s;
+    }
+
+    .d3 {
+      transition-delay: 0.24s;
+    }
+
+    .d4 {
+      transition-delay: 0.32s;
+    }
+
+    .d5 {
+      transition-delay: 0.40s;
+    }
 
     @media (prefers-reduced-motion: reduce) {
-      .reveal, .reveal-l, .reveal-r { opacity: 1; transform: none; transition: none; }
+
+      .reveal,
+      .reveal-l,
+      .reveal-r {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
     }
 
     /* ── TYPOGRAPHY HELPERS ── */
@@ -83,6 +157,7 @@
       color: var(--orange-dark);
       margin-bottom: 0.625rem;
     }
+
     .lbl::before {
       content: '';
       display: block;
@@ -91,7 +166,10 @@
       background: var(--orange);
       border-radius: 2px;
     }
-    .lbl.center::before { display: none; }
+
+    .lbl.center::before {
+      display: none;
+    }
 
     .h2 {
       font-family: var(--font-h);
@@ -100,6 +178,7 @@
       line-height: 1.12;
       color: var(--black);
     }
+
     .sub {
       font-size: 1rem;
       color: var(--gray);
@@ -108,7 +187,9 @@
       margin-top: 0.625rem;
     }
 
-    section { padding: 4.5rem 0; }
+    section {
+      padding: 4.5rem 0;
+    }
 
     /* ── BUTTONS ── */
     .btn {
@@ -124,29 +205,44 @@
       white-space: nowrap;
       cursor: pointer;
     }
-    .btn:active { transform: scale(0.97); }
 
-    .btn-primary { background: var(--orange); color: var(--black); }
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--black);
+    }
+
     .btn-primary:hover {
       background: var(--orange-dark);
       color: var(--white);
       transform: translateY(-1px);
-      box-shadow: 0 8px 24px rgba(245,166,35,0.28);
+      box-shadow: 0 8px 24px rgba(245, 166, 35, 0.28);
     }
 
     .btn-outline {
       background: transparent;
       color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.28);
+      border: 1.5px solid rgba(255, 255, 255, 0.28);
     }
-    .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
 
     .btn-ghost {
       background: transparent;
       color: var(--black);
       border: 1.5px solid var(--border);
     }
-    .btn-ghost:hover { border-color: var(--orange); color: var(--orange-dark); }
+
+    .btn-ghost:hover {
+      border-color: var(--orange);
+      color: var(--orange-dark);
+    }
 
     /* ══════════════════════════════
        HEADER
@@ -159,7 +255,11 @@
       border-bottom: 1px solid transparent;
       transition: border-color 200ms, box-shadow 200ms;
     }
-    .hdr.scrolled { border-color: var(--border); box-shadow: 0 1px 16px rgba(0,0,0,0.06); }
+
+    .hdr.scrolled {
+      border-color: var(--border);
+      box-shadow: 0 1px 16px rgba(0, 0, 0, 0.06);
+    }
 
     .hdr-inner {
       display: flex;
@@ -174,7 +274,14 @@
       gap: 0.6rem;
       flex-shrink: 0;
     }
-    .logo img { height: 36px; width: 36px; object-fit: contain; border-radius: 6px; }
+
+    .logo img {
+      height: 36px;
+      width: 36px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
     .logo-txt {
       font-family: var(--font-h);
       font-weight: 800;
@@ -188,6 +295,7 @@
       align-items: center;
       gap: 0.125rem;
     }
+
     .nav-desk a {
       font-family: var(--font-h);
       font-weight: 500;
@@ -197,9 +305,17 @@
       border-radius: 6px;
       transition: color 150ms, background 150ms;
     }
-    .nav-desk a:hover { color: var(--black); background: var(--light); }
 
-    .hdr-right { display: flex; align-items: center; gap: 0.625rem; }
+    .nav-desk a:hover {
+      color: var(--black);
+      background: var(--light);
+    }
+
+    .hdr-right {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
 
     .tel-btn {
       display: flex;
@@ -214,11 +330,23 @@
       transition: background 150ms;
       text-decoration: none;
     }
-    .tel-btn svg { color: var(--orange); flex-shrink: 0; }
-    .tel-btn .tel-num { display: none; }
-    .tel-btn:hover { background: var(--orange-light); }
 
-    .cta-hdr { display: none; }
+    .tel-btn svg {
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .tel-btn .tel-num {
+      display: none;
+    }
+
+    .tel-btn:hover {
+      background: var(--orange-light);
+    }
+
+    .cta-hdr {
+      display: none;
+    }
 
     .burger {
       display: flex;
@@ -231,7 +359,11 @@
       border-radius: 8px;
       transition: background 150ms;
     }
-    .burger:hover { background: var(--light); }
+
+    .burger:hover {
+      background: var(--light);
+    }
+
     .burger span {
       display: block;
       width: 22px;
@@ -240,15 +372,36 @@
       border-radius: 2px;
       transition: all 300ms var(--ease-out);
     }
-    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .burger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .burger.open span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .burger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
 
     @media (min-width: 1024px) {
-      .nav-desk { display: flex; }
-      .burger { display: none; }
-      .cta-hdr { display: inline-flex; }
-      .tel-btn .tel-num { display: inline; }
+      .nav-desk {
+        display: flex;
+      }
+
+      .burger {
+        display: none;
+      }
+
+      .cta-hdr {
+        display: inline-flex;
+      }
+
+      .tel-btn .tel-num {
+        display: inline;
+      }
     }
 
     /* Mobile menu */
@@ -263,9 +416,17 @@
       transform: translateX(100%);
       transition: transform 350ms var(--ease-out);
     }
-    .mob-menu.open { transform: none; }
 
-    .mob-nav { display: flex; flex-direction: column; gap: 0; }
+    .mob-menu.open {
+      transform: none;
+    }
+
+    .mob-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
     .mob-nav a {
       font-family: var(--font-h);
       font-size: 1.5rem;
@@ -278,7 +439,10 @@
       justify-content: space-between;
       transition: color 150ms;
     }
-    .mob-nav a:hover { color: var(--orange-dark); }
+
+    .mob-nav a:hover {
+      color: var(--orange-dark);
+    }
 
     .mob-contact {
       margin-top: auto;
@@ -287,8 +451,19 @@
       border-radius: 12px;
       border: 1px solid var(--border);
     }
-    .mob-contact p { font-size: 0.8rem; color: var(--gray); margin-bottom: 0.375rem; }
-    .mob-contact a { font-family: var(--font-h); font-weight: 800; font-size: 1.25rem; color: var(--black); }
+
+    .mob-contact p {
+      font-size: 0.8rem;
+      color: var(--gray);
+      margin-bottom: 0.375rem;
+    }
+
+    .mob-contact a {
+      font-family: var(--font-h);
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--black);
+    }
 
     /* ══════════════════════════════
        HERO
@@ -311,9 +486,10 @@
       right: -5%;
       width: 55%;
       padding-bottom: 55%;
-      background: radial-gradient(circle, rgba(245,166,35,0.14) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(245, 166, 35, 0.14) 0%, transparent 70%);
       pointer-events: none;
     }
+
     .hero::after {
       content: '';
       position: absolute;
@@ -321,11 +497,14 @@
       left: -5%;
       width: 40%;
       padding-bottom: 40%;
-      background: radial-gradient(circle, rgba(245,166,35,0.07) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(245, 166, 35, 0.07) 0%, transparent 70%);
       pointer-events: none;
     }
 
-    .hero-wrap { width: 100%; padding: 3.5rem 0; }
+    .hero-wrap {
+      width: 100%;
+      padding: 3.5rem 0;
+    }
 
     .hero-grid {
       display: grid;
@@ -333,9 +512,16 @@
       gap: 2.5rem;
       align-items: center;
     }
+
     @media (min-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr 1fr; gap: 4rem; }
-      .hero { min-height: min(82vh, 700px); }
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+
+      .hero {
+        min-height: min(82vh, 700px);
+      }
     }
 
     /* Badge */
@@ -343,8 +529,8 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(245,166,35,0.12);
-      border: 1px solid rgba(245,166,35,0.28);
+      background: rgba(245, 166, 35, 0.12);
+      border: 1px solid rgba(245, 166, 35, 0.28);
       color: var(--orange);
       font-family: var(--font-h);
       font-size: 0.72rem;
@@ -355,6 +541,7 @@
       border-radius: 100px;
       margin-bottom: 1.25rem;
     }
+
     .badge-dot {
       width: 6px;
       height: 6px;
@@ -362,9 +549,19 @@
       background: var(--orange);
       animation: dotpulse 2.4s ease infinite;
     }
+
     @keyframes dotpulse {
-      0%,100% { opacity:1; transform:scale(1); }
-      50% { opacity:0.45; transform:scale(0.75); }
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.45;
+        transform: scale(0.75);
+      }
     }
 
     .hero-h1 {
@@ -375,17 +572,25 @@
       color: var(--white);
       margin-bottom: 1rem;
     }
-    .hero-h1 span { color: var(--orange); display: block; }
+
+    .hero-h1 span {
+      color: var(--orange);
+      display: block;
+    }
 
     .hero-p {
       font-size: 1rem;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
       line-height: 1.7;
       max-width: 44ch;
       margin-bottom: 2rem;
     }
 
-    .hero-btns { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
 
     /* Category buttons */
     .cat-grid {
@@ -400,34 +605,39 @@
       align-items: flex-start;
       gap: 0.5rem;
       padding: 1.125rem 1rem;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 12px;
       cursor: pointer;
       transition: background 200ms var(--ease-out),
-                  border-color 200ms var(--ease-out),
-                  transform 200ms var(--ease-out),
-                  box-shadow 200ms var(--ease-out);
+        border-color 200ms var(--ease-out),
+        transform 200ms var(--ease-out),
+        box-shadow 200ms var(--ease-out);
       text-align: left;
     }
+
     .cat-btn:hover {
-      background: rgba(245,166,35,0.12);
-      border-color: rgba(245,166,35,0.35);
+      background: rgba(245, 166, 35, 0.12);
+      border-color: rgba(245, 166, 35, 0.35);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     }
-    .cat-btn:active { transform: scale(0.97); }
+
+    .cat-btn:active {
+      transform: scale(0.97);
+    }
 
     .cat-ico {
       width: 36px;
       height: 36px;
-      background: rgba(245,166,35,0.18);
+      background: rgba(245, 166, 35, 0.18);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--orange);
     }
+
     .cat-title {
       font-family: var(--font-h);
       font-weight: 700;
@@ -435,18 +645,24 @@
       color: var(--white);
       line-height: 1.3;
     }
+
     .cat-sub {
       font-size: 0.72rem;
-      color: rgba(255,255,255,0.45);
+      color: rgba(255, 255, 255, 0.45);
       line-height: 1.4;
     }
 
     /* ══════════════════════════════
        POSTUP
     ══════════════════════════════ */
-    .postup { background: var(--light); }
+    .postup {
+      background: var(--light);
+    }
 
-    .postup-hdr { text-align: center; margin-bottom: 3rem; }
+    .postup-hdr {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
 
     .steps {
       display: grid;
@@ -459,6 +675,7 @@
         grid-template-columns: repeat(4, 1fr);
         position: relative;
       }
+
       .steps::before {
         content: '';
         position: absolute;
@@ -478,7 +695,10 @@
       border-bottom: 1px solid var(--border);
       position: relative;
     }
-    .step:last-child { border-bottom: none; }
+
+    .step:last-child {
+      border-bottom: none;
+    }
 
     @media (min-width: 768px) {
       .step {
@@ -509,11 +729,13 @@
       z-index: 1;
       transition: border-color 400ms var(--ease-out), color 400ms var(--ease-out), background 400ms var(--ease-out);
     }
+
     .step.on .step-num {
       border-color: var(--orange);
       color: var(--orange-dark);
       background: var(--orange-light);
     }
+
     .step-ttl {
       font-family: var(--font-h);
       font-weight: 700;
@@ -521,12 +743,19 @@
       color: var(--black);
       margin-bottom: 0.3rem;
     }
-    .step-dsc { font-size: 0.85rem; color: var(--gray); line-height: 1.6; }
+
+    .step-dsc {
+      font-size: 0.85rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
 
     /* ══════════════════════════════
        SLUZBY (TABS)
     ══════════════════════════════ */
-    .sluzby-hdr { margin-bottom: 1.75rem; }
+    .sluzby-hdr {
+      margin-bottom: 1.75rem;
+    }
 
     .tabs {
       display: flex;
@@ -539,7 +768,10 @@
       scrollbar-width: none;
       -ms-overflow-style: none;
     }
-    .tabs::-webkit-scrollbar { display: none; }
+
+    .tabs::-webkit-scrollbar {
+      display: none;
+    }
 
     .tab-btn {
       flex: none;
@@ -556,21 +788,36 @@
       white-space: nowrap;
       cursor: pointer;
     }
+
     .tab-btn.active {
       background: var(--white);
       color: var(--black);
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 2px 12px rgba(0,0,0,0.04);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08), 0 2px 12px rgba(0, 0, 0, 0.04);
     }
-    .tab-btn.active svg { color: var(--orange); }
 
-    .tab-panel { display: none; }
+    .tab-btn.active svg {
+      color: var(--orange);
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
     .tab-panel.active {
       display: block;
       animation: tab-in 280ms var(--ease-out) both;
     }
+
     @keyframes tab-in {
-      from { opacity: 0; transform: translateY(8px); }
-      to   { opacity: 1; transform: none; }
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
 
     .svc-grid {
@@ -578,8 +825,18 @@
       grid-template-columns: 1fr;
       gap: 1rem;
     }
-    @media (min-width: 560px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1024px) { .svc-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    @media (min-width: 560px) {
+      .svc-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .svc-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
     .svc-card {
       padding: 1.375rem;
@@ -588,15 +845,17 @@
       border-radius: 12px;
       transition: border-color 200ms, background 200ms, transform 200ms var(--ease-out);
     }
+
     .svc-card:hover {
       border-color: var(--orange-border);
       background: var(--orange-light);
       transform: translateY(-2px);
     }
+
     .svc-ico {
       width: 42px;
       height: 42px;
-      background: rgba(245,166,35,0.14);
+      background: rgba(245, 166, 35, 0.14);
       border-radius: 9px;
       display: flex;
       align-items: center;
@@ -604,6 +863,7 @@
       color: var(--orange-dark);
       margin-bottom: 0.875rem;
     }
+
     .svc-ttl {
       font-family: var(--font-h);
       font-weight: 700;
@@ -611,20 +871,35 @@
       color: var(--black);
       margin-bottom: 0.3rem;
     }
-    .svc-dsc { font-size: 0.85rem; color: var(--gray); line-height: 1.6; }
+
+    .svc-dsc {
+      font-size: 0.85rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
 
     /* ══════════════════════════════
        BENEFITY
     ══════════════════════════════ */
-    .benefity { background: var(--light); }
-    .ben-hdr { margin-bottom: 2.75rem; }
+    .benefity {
+      background: var(--light);
+    }
+
+    .ben-hdr {
+      margin-bottom: 2.75rem;
+    }
 
     .ben-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.125rem;
     }
-    @media (min-width: 1024px) { .ben-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    @media (min-width: 1024px) {
+      .ben-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
     .ben-item {
       padding: 1.375rem;
@@ -632,6 +907,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
     }
+
     .ben-ico {
       width: 46px;
       height: 46px;
@@ -643,6 +919,7 @@
       color: var(--orange-dark);
       margin-bottom: 0.875rem;
     }
+
     .ben-ttl {
       font-family: var(--font-h);
       font-weight: 700;
@@ -650,7 +927,12 @@
       color: var(--black);
       margin-bottom: 0.3rem;
     }
-    .ben-dsc { font-size: 0.83rem; color: var(--gray); line-height: 1.6; }
+
+    .ben-dsc {
+      font-size: 0.83rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
 
     /* ══════════════════════════════
        SERVIS
@@ -661,7 +943,12 @@
       gap: 3rem;
       align-items: center;
     }
-    @media (min-width: 1024px) { .servis-grid { grid-template-columns: 1fr 1fr; } }
+
+    @media (min-width: 1024px) {
+      .servis-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
 
     .servis-visual {
       background: var(--dark);
@@ -671,6 +958,7 @@
       overflow: hidden;
       min-height: 280px;
     }
+
     .servis-visual::before {
       content: '';
       position: absolute;
@@ -678,7 +966,7 @@
       right: -10%;
       width: 280px;
       height: 280px;
-      background: radial-gradient(circle, rgba(245,166,35,0.18) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(245, 166, 35, 0.18) 0%, transparent 70%);
     }
 
     .servis-vtitle {
@@ -690,19 +978,26 @@
       position: relative;
     }
 
-    .servis-checks { display: flex; flex-direction: column; gap: 0.7rem; position: relative; }
+    .servis-checks {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      position: relative;
+    }
+
     .servis-chk {
       display: flex;
       align-items: center;
       gap: 0.75rem;
       font-size: 0.9rem;
-      color: rgba(255,255,255,0.78);
+      color: rgba(255, 255, 255, 0.78);
     }
+
     .chk-dot {
       flex-shrink: 0;
       width: 20px;
       height: 20px;
-      background: rgba(245,166,35,0.18);
+      background: rgba(245, 166, 35, 0.18);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -710,16 +1005,30 @@
       color: var(--orange);
     }
 
-    .servis-content .lbl { margin-bottom: 0.625rem; }
-    .servis-content .h2 { margin-bottom: 0.875rem; }
-    .servis-content .sub { margin-bottom: 1.75rem; }
+    .servis-content .lbl {
+      margin-bottom: 0.625rem;
+    }
 
-    .servis-feats { display: flex; flex-direction: column; gap: 1rem; }
+    .servis-content .h2 {
+      margin-bottom: 0.875rem;
+    }
+
+    .servis-content .sub {
+      margin-bottom: 1.75rem;
+    }
+
+    .servis-feats {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
     .servis-feat {
       display: flex;
       gap: 0.875rem;
       align-items: flex-start;
     }
+
     .servis-feat-ico {
       flex-shrink: 0;
       width: 40px;
@@ -731,6 +1040,7 @@
       justify-content: center;
       color: var(--orange-dark);
     }
+
     .servis-feat-ttl {
       font-family: var(--font-h);
       font-weight: 700;
@@ -738,13 +1048,23 @@
       color: var(--black);
       margin-bottom: 0.2rem;
     }
-    .servis-feat-dsc { font-size: 0.83rem; color: var(--gray); }
+
+    .servis-feat-dsc {
+      font-size: 0.83rem;
+      color: var(--gray);
+    }
 
     /* ══════════════════════════════
        REFERENCIE
     ══════════════════════════════ */
-    .referencie { background: var(--light); }
-    .ref-hdr { text-align: center; margin-bottom: 2.25rem; }
+    .referencie {
+      background: var(--light);
+    }
+
+    .ref-hdr {
+      text-align: center;
+      margin-bottom: 2.25rem;
+    }
 
     .reviews {
       display: flex;
@@ -755,7 +1075,10 @@
       -ms-overflow-style: none;
       padding-bottom: 0.5rem;
     }
-    .reviews::-webkit-scrollbar { display: none; }
+
+    .reviews::-webkit-scrollbar {
+      display: none;
+    }
 
     .rev-card {
       flex: none;
@@ -767,12 +1090,30 @@
       padding: 1.625rem;
     }
 
-    .rev-stars { display: flex; gap: 2px; margin-bottom: 0.875rem; }
-    .rev-stars span { color: var(--orange); font-size: 0.95rem; }
+    .rev-stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 0.875rem;
+    }
 
-    .rev-txt { font-size: 0.88rem; color: var(--dark); line-height: 1.7; margin-bottom: 1.375rem; }
+    .rev-stars span {
+      color: var(--orange);
+      font-size: 0.95rem;
+    }
 
-    .rev-author { display: flex; align-items: center; gap: 0.75rem; }
+    .rev-txt {
+      font-size: 0.88rem;
+      color: var(--dark);
+      line-height: 1.7;
+      margin-bottom: 1.375rem;
+    }
+
+    .rev-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
     .rev-av {
       width: 38px;
       height: 38px;
@@ -788,8 +1129,18 @@
       color: var(--orange-dark);
       flex-shrink: 0;
     }
-    .rev-name { font-family: var(--font-h); font-weight: 700; font-size: 0.875rem; color: var(--black); }
-    .rev-loc { font-size: 0.78rem; color: var(--gray); }
+
+    .rev-name {
+      font-family: var(--font-h);
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--black);
+    }
+
+    .rev-loc {
+      font-size: 0.78rem;
+      color: var(--gray);
+    }
 
     /* ══════════════════════════════
        FAQ
@@ -799,11 +1150,17 @@
       grid-template-columns: 1fr;
       gap: 3rem;
     }
+
     @media (min-width: 1024px) {
-      .faq-layout { grid-template-columns: 1fr 2fr; align-items: start; }
+      .faq-layout {
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+      }
     }
 
-    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
 
     .faq-q {
       display: flex;
@@ -820,7 +1177,10 @@
       text-align: left;
       width: 100%;
     }
-    .faq-q:hover { color: var(--orange-dark); }
+
+    .faq-q:hover {
+      color: var(--orange-dark);
+    }
 
     .faq-tog {
       flex-shrink: 0;
@@ -834,6 +1194,7 @@
       color: var(--gray);
       transition: all 250ms var(--ease-out);
     }
+
     .faq-item.open .faq-tog {
       background: var(--orange);
       border-color: var(--orange);
@@ -846,14 +1207,29 @@
       overflow: hidden;
       transition: max-height 380ms var(--ease-out);
     }
-    .faq-item.open .faq-a { max-height: 300px; }
-    .faq-a-inner { padding-bottom: 1.125rem; font-size: 0.88rem; color: var(--gray); line-height: 1.7; }
+
+    .faq-item.open .faq-a {
+      max-height: 300px;
+    }
+
+    .faq-a-inner {
+      padding-bottom: 1.125rem;
+      font-size: 0.88rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
 
     /* ══════════════════════════════
        PARTNERI
     ══════════════════════════════ */
-    .partneri { background: var(--light); }
-    .par-hdr { text-align: center; margin-bottom: 2.25rem; }
+    .partneri {
+      background: var(--light);
+    }
+
+    .par-hdr {
+      text-align: center;
+      margin-bottom: 2.25rem;
+    }
 
     .partners {
       display: flex;
@@ -862,6 +1238,7 @@
       align-items: center;
       gap: 0.875rem;
     }
+
     .partner-tag {
       padding: 0.7rem 1.625rem;
       background: var(--white);
@@ -874,7 +1251,12 @@
       letter-spacing: 0.05em;
       transition: all 200ms;
     }
-    .partner-tag:hover { border-color: var(--orange-border); color: var(--black); background: var(--orange-light); }
+
+    .partner-tag:hover {
+      border-color: var(--orange-border);
+      color: var(--black);
+      background: var(--orange-light);
+    }
 
     /* ══════════════════════════════
        KONTAKT
@@ -884,13 +1266,33 @@
       grid-template-columns: 1fr;
       gap: 3rem;
     }
-    @media (min-width: 1024px) { .kontakt-grid { grid-template-columns: 1fr 1fr; } }
 
-    .contact-info .h2 { margin-bottom: 0.875rem; }
-    .contact-info .sub { margin-bottom: 2rem; }
+    @media (min-width: 1024px) {
+      .kontakt-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
 
-    .ci-list { display: flex; flex-direction: column; gap: 1.25rem; }
-    .ci-item { display: flex; gap: 0.875rem; align-items: flex-start; }
+    .contact-info .h2 {
+      margin-bottom: 0.875rem;
+    }
+
+    .contact-info .sub {
+      margin-bottom: 2rem;
+    }
+
+    .ci-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .ci-item {
+      display: flex;
+      gap: 0.875rem;
+      align-items: flex-start;
+    }
+
     .ci-ico {
       flex-shrink: 0;
       width: 42px;
@@ -902,12 +1304,37 @@
       justify-content: center;
       color: var(--orange-dark);
     }
-    .ci-lbl { font-size: 0.72rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 0.2rem; }
-    .ci-val { font-family: var(--font-h); font-weight: 600; font-size: 0.975rem; color: var(--black); }
-    .ci-val a { transition: color 150ms; }
-    .ci-val a:hover { color: var(--orange-dark); }
 
-    .soc-links { display: flex; gap: 0.625rem; margin-top: 1.75rem; }
+    .ci-lbl {
+      font-size: 0.72rem;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .ci-val {
+      font-family: var(--font-h);
+      font-weight: 600;
+      font-size: 0.975rem;
+      color: var(--black);
+    }
+
+    .ci-val a {
+      transition: color 150ms;
+    }
+
+    .ci-val a:hover {
+      color: var(--orange-dark);
+    }
+
+    .soc-links {
+      display: flex;
+      gap: 0.625rem;
+      margin-top: 1.75rem;
+    }
+
     .soc-link {
       width: 42px;
       height: 42px;
@@ -920,6 +1347,7 @@
       color: var(--gray);
       transition: all 200ms;
     }
+
     .soc-link:hover {
       background: var(--orange-light);
       border-color: var(--orange-border);
@@ -933,6 +1361,7 @@
       border-radius: 16px;
       padding: 1.875rem;
     }
+
     .cform-ttl {
       font-family: var(--font-h);
       font-weight: 700;
@@ -940,7 +1369,11 @@
       color: var(--black);
       margin-bottom: 1.375rem;
     }
-    .fg { margin-bottom: 1rem; }
+
+    .fg {
+      margin-bottom: 1rem;
+    }
+
     .flbl {
       display: block;
       font-family: var(--font-h);
@@ -949,8 +1382,14 @@
       color: var(--dark);
       margin-bottom: 0.35rem;
     }
-    .req { color: var(--orange); }
-    .finput, .fselect, .ftextarea {
+
+    .req {
+      color: var(--orange);
+    }
+
+    .finput,
+    .fselect,
+    .ftextarea {
       width: 100%;
       padding: 0.72rem 0.95rem;
       background: var(--white);
@@ -963,13 +1402,31 @@
       transition: border-color 150ms, box-shadow 150ms;
       -webkit-appearance: none;
     }
-    .finput:focus, .fselect:focus, .ftextarea:focus {
+
+    .finput:focus,
+    .fselect:focus,
+    .ftextarea:focus {
       border-color: var(--orange);
-      box-shadow: 0 0 0 3px rgba(245,166,35,0.15);
+      box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.15);
     }
-    .ftextarea { resize: vertical; min-height: 112px; }
-    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    .fsub { width: 100%; margin-top: 0.375rem; justify-content: center; }
+
+    .ftextarea {
+      resize: vertical;
+      min-height: 112px;
+    }
+
+    .frow {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .fsub {
+      width: 100%;
+      margin-top: 0.375rem;
+      justify-content: center;
+    }
+
     .fok {
       display: none;
       margin-top: 0.875rem;
@@ -986,27 +1443,78 @@
     /* ══════════════════════════════
        FOOTER
     ══════════════════════════════ */
-    footer { background: var(--dark); padding: 3.5rem 0 1.5rem; }
+    footer {
+      background: var(--dark);
+      padding: 3.5rem 0 1.5rem;
+    }
 
     .foot-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
       padding-bottom: 2.25rem;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       margin-bottom: 1.5rem;
     }
-    @media (min-width: 768px) { .foot-grid { grid-template-columns: 2fr 1fr 1fr; } }
 
-    .foot-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.875rem; }
-    .foot-logo img { height: 32px; width: 32px; object-fit: contain; border-radius: 6px; }
-    .foot-logo-txt { font-family: var(--font-h); font-weight: 800; font-size: 1rem; color: var(--white); }
-    .foot-about { font-size: 0.875rem; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 36ch; }
+    @media (min-width: 768px) {
+      .foot-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+    }
 
-    .foot-col-ttl { font-family: var(--font-h); font-weight: 700; font-size: 0.875rem; color: var(--white); margin-bottom: 0.875rem; }
-    .foot-links { display: flex; flex-direction: column; gap: 0.5rem; }
-    .foot-links a, .foot-links span { font-size: 0.875rem; color: rgba(255,255,255,0.45); transition: color 150ms; }
-    .foot-links a:hover { color: var(--orange); }
+    .foot-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.875rem;
+    }
+
+    .foot-logo img {
+      height: 32px;
+      width: 32px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    .foot-logo-txt {
+      font-family: var(--font-h);
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--white);
+    }
+
+    .foot-about {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.45);
+      line-height: 1.7;
+      max-width: 36ch;
+    }
+
+    .foot-col-ttl {
+      font-family: var(--font-h);
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--white);
+      margin-bottom: 0.875rem;
+    }
+
+    .foot-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .foot-links a,
+    .foot-links span {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.45);
+      transition: color 150ms;
+    }
+
+    .foot-links a:hover {
+      color: var(--orange);
+    }
 
     .foot-bottom {
       display: flex;
@@ -1015,769 +1523,1097 @@
       align-items: center;
       gap: 0.75rem;
     }
-    .foot-copy { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
-    .foot-bot-links { display: flex; gap: 1.25rem; }
-    .foot-bot-links a { font-size: 0.78rem; color: rgba(255,255,255,0.3); transition: color 150ms; }
-    .foot-bot-links a:hover { color: var(--orange); }
+
+    .foot-copy {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .foot-bot-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .foot-bot-links a {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.3);
+      transition: color 150ms;
+    }
+
+    .foot-bot-links a:hover {
+      color: var(--orange);
+    }
 
     /* Foot social */
-    .foot-soc { display: flex; gap: 0.5rem; margin-top: 1.25rem; }
+    .foot-soc {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+
     .foot-soc a {
-      width: 38px; height: 38px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.1);
+      width: 38px;
+      height: 38px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 7px;
-      display: flex; align-items: center; justify-content: center;
-      color: rgba(255,255,255,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.45);
       transition: all 180ms;
     }
-    .foot-soc a:hover { background: rgba(245,166,35,0.15); border-color: rgba(245,166,35,0.3); color: var(--orange); }
+
+    .foot-soc a:hover {
+      background: rgba(245, 166, 35, 0.15);
+      border-color: rgba(245, 166, 35, 0.3);
+      color: var(--orange);
+    }
   </style>
 </head>
+
 <body>
 
-<!-- ══ HEADER ══ -->
-<header class="hdr" id="hdr">
-  <div class="container">
-    <div class="hdr-inner">
-      <a href="#" class="logo" aria-label="Profinstal – domov">
-        <img src="logo.jpg" alt="Profinstal logo">
-        <span class="logo-txt">PROFINSTAL</span>
-      </a>
-
-      <nav class="nav-desk" aria-label="Hlavná navigácia">
-        <a href="#sluzby">Služby</a>
-        <a href="#postup">Postup</a>
-        <a href="#benefity">Benefity</a>
-        <a href="#referencie">Referencie</a>
-        <a href="#faq">Otázky</a>
-      </nav>
-
-      <div class="hdr-right">
-        <a href="tel:+421949104281" class="tel-btn" aria-label="Zavolajte nám">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.9a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          <span class="tel-num">+421 949 104 281</span>
-        </a>
-        <a href="#kontakt" class="btn btn-primary cta-hdr">Kontaktujte nás</a>
-        <button class="burger" id="burger" aria-label="Otvoriť menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- ══ MOBILE MENU ══ -->
-<div class="mob-menu" id="mob-menu" aria-hidden="true" role="dialog" aria-label="Navigácia">
-  <nav class="mob-nav">
-    <a href="#sluzby" onclick="closeMenu()">Služby <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
-    <a href="#postup" onclick="closeMenu()">Postup <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
-    <a href="#benefity" onclick="closeMenu()">Benefity <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
-    <a href="#referencie" onclick="closeMenu()">Referencie <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
-    <a href="#faq" onclick="closeMenu()">Otázky <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
-    <a href="#kontakt" onclick="closeMenu()">Kontakt <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
-  </nav>
-  <div class="mob-contact">
-    <p>Zavolajte nám</p>
-    <a href="tel:+421949104281">+421 949 104 281</a>
-  </div>
-</div>
-
-<!-- ══ HERO ══ -->
-<section class="hero" aria-label="Úvodná sekcia">
-  <div class="container hero-wrap">
-    <div class="hero-grid">
-      <div>
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Spoľahlivé inštalácie od roku 2020
-        </div>
-        <h1 class="hero-h1">
-          Kompletné inštalácie
-          <span>pre váš domov.</span>
-        </h1>
-        <p class="hero-p">Kúrenie, voda, elektrina aj plyn — zabezpečíme rýchlo, bezpečne a profesionálne. Prídeme, poradíme, urobíme.</p>
-        <div class="hero-btns">
-          <a href="#kontakt" class="btn btn-primary">
-            Nezáväzná konzultácia
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
-          <a href="tel:+421949104281" class="btn btn-outline">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.9a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            Zavolať
-          </a>
-        </div>
-      </div>
-
-      <!-- Quick-access category buttons -->
-      <div class="cat-grid" role="group" aria-label="Rýchly prístup ku kategóriám">
-        <button class="cat-btn" onclick="goTab('teplo')" aria-label="Teplo a chladenie">
-          <div class="cat-ico">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2S8 7 8 12a4 4 0 008 0c0-5-4-10-4-10z"/><path d="M12 12a2 2 0 000 4"/></svg>
-          </div>
-          <span class="cat-title">Teplo a chladenie</span>
-          <span class="cat-sub">Čerpadlá, klimatizácie, kotly</span>
-        </button>
-        <button class="cat-btn" onclick="goTab('voda')" aria-label="Voda a odpad">
-          <div class="cat-ico">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L5 11a7 7 0 1014 0L12 2z"/></svg>
-          </div>
-          <span class="cat-title">Voda a odpad</span>
-          <span class="cat-sub">Vodoinštalácie, odpady</span>
-        </button>
-        <button class="cat-btn" onclick="goTab('elektrina')" aria-label="Elektrina">
-          <div class="cat-ico">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          </div>
-          <span class="cat-title">Elektrina</span>
-          <span class="cat-sub">Elektroinštalácie, prípojky NN/VN</span>
-        </button>
-        <button class="cat-btn" onclick="goTab('plyn')" aria-label="Plyn">
-          <div class="cat-ico">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22a7 7 0 007-7c0-5-7-13-7-13S5 10 5 15a7 7 0 007 7z"/><path d="M9 16c0-2 2-4 3-5"/></svg>
-          </div>
-          <span class="cat-title">Plyn</span>
-          <span class="cat-sub">Prípojky, regulačné stanice</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ POSTUP ══ -->
-<section class="postup" id="postup">
-  <div class="container">
-    <div class="postup-hdr reveal">
-      <div class="lbl center">Ako pracujeme</div>
-      <h2 class="h2">4 jednoduché kroky</h2>
-      <p class="sub" style="margin:0.625rem auto 0;text-align:center;">Od prvého kontaktu po dokončenú prácu — všetko riadime my.</p>
-    </div>
-    <div class="steps">
-      <div class="step reveal d1">
-        <div class="step-num">01</div>
-        <div>
-          <div class="step-ttl">Zavoláte alebo napíšete</div>
-          <div class="step-dsc">Kontaktujte nás — opíšte čo potrebujete a my sa ozveme do 24 hodín.</div>
-        </div>
-      </div>
-      <div class="step reveal d2">
-        <div class="step-num">02</div>
-        <div>
-          <div class="step-ttl">Obhliadka a ponuka</div>
-          <div class="step-dsc">Dohodneme termín, prídeme na miesto, poradíme a vystavíme cenovú ponuku.</div>
-        </div>
-      </div>
-      <div class="step reveal d3">
-        <div class="step-num">03</div>
-        <div>
-          <div class="step-ttl">Realizácia</div>
-          <div class="step-dsc">Vykonáme prácu rýchlo a zodpovedne, s dôrazom na kvalitu a bezpečnosť.</div>
-        </div>
-      </div>
-      <div class="step reveal d4">
-        <div class="step-num">04</div>
-        <div>
-          <div class="step-ttl">Servis a záruka</div>
-          <div class="step-dsc">Na všetky práce dávame záruku a zostávame k dispozícii pre servis.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ SLUZBY ══ -->
-<section id="sluzby">
-  <div class="container">
-    <div class="sluzby-hdr reveal">
-      <div class="lbl">Čo robíme</div>
-      <h2 class="h2">Naše služby</h2>
-      <p class="sub">Komplexné riešenia pre váš domov aj podnik — od kúrenia po elektrinu.</p>
-    </div>
-
-    <div class="tabs" role="tablist">
-      <button class="tab-btn active" id="tab-teplo" role="tab" aria-selected="true" aria-controls="panel-teplo" onclick="switchTab('teplo')">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2S8 7 8 12a4 4 0 008 0c0-5-4-10-4-10z"/></svg>
-        Teplo a chladenie
-      </button>
-      <button class="tab-btn" id="tab-voda" role="tab" aria-selected="false" aria-controls="panel-voda" onclick="switchTab('voda')">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L5 11a7 7 0 1014 0L12 2z"/></svg>
-        Voda a odpad
-      </button>
-      <button class="tab-btn" id="tab-elektrina" role="tab" aria-selected="false" aria-controls="panel-elektrina" onclick="switchTab('elektrina')">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        Elektrina
-      </button>
-      <button class="tab-btn" id="tab-plyn" role="tab" aria-selected="false" aria-controls="panel-plyn" onclick="switchTab('plyn')">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22a7 7 0 007-7c0-5-7-13-7-13S5 10 5 15a7 7 0 007 7z"/></svg>
-        Plyn
-      </button>
-    </div>
-
-    <!-- Teplo -->
-    <div class="tab-panel active" id="panel-teplo" role="tabpanel" aria-labelledby="tab-teplo">
-      <div class="svc-grid">
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2S8 7 8 12a4 4 0 008 0c0-5-4-10-4-10z"/></svg></div>
-          <div class="svc-ttl">Tepelné čerpadlá</div>
-          <div class="svc-dsc">Inštalácia a servis vzduch-voda, voda-voda aj zem-voda tepelných čerpadiel od popredných výrobcov.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18"/></svg></div>
-          <div class="svc-ttl">Klimatizácie</div>
-          <div class="svc-dsc">Montáž klimatizačných jednotiek pre chladenie aj kúrenie — rýchlo a čisto, s minimálnym zásahom.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12H2M12 2v20"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <div class="svc-ttl">Podlahové kúrenie</div>
-          <div class="svc-dsc">Elektrické aj vodné podlahové vykurovanie s termostatickou reguláciou teploty v každej miestnosti.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="1"/><path d="M9 7h6M9 11h6M9 15h6"/></svg></div>
-          <div class="svc-ttl">Kotly a bojlery</div>
-          <div class="svc-dsc">Inštalácia, výmena a servis plynových, elektrických aj tuhopálivových kotlov a zásobníkov TÚV.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
-          <div class="svc-ttl">Rekuperácie</div>
-          <div class="svc-dsc">Riadené vetranie so spätným získavaním tepla pre zdravý vzduch bez úniku energie.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div class="svc-ttl">Revízie a servis</div>
-          <div class="svc-dsc">Pravidelné revízie tepelných zariadení podľa platnej legislatívy s vydaním protokolu.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Voda -->
-    <div class="tab-panel" id="panel-voda" role="tabpanel" aria-labelledby="tab-voda">
-      <div class="svc-grid">
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M5 12a2 2 0 01-2-2V6h18v4a2 2 0 01-2 2M5 12v5a2 2 0 002 2h10a2 2 0 002-2v-5"/></svg></div>
-          <div class="svc-ttl">Vodoinštalácie</div>
-          <div class="svc-dsc">Kompletné rozvody vody od prípojky až po batérie — novostavby aj rekonštrukcie bytov a domov.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22L5 15l7-7 7 7-7 7z"/><path d="M12 8V2"/></svg></div>
-          <div class="svc-ttl">Kanalizácia a odpady</div>
-          <div class="svc-dsc">Inštalácia odpadových potrubí, revíznych šácht a čistenie upchatej kanalizácie.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
-          <div class="svc-ttl">Vodovodné prípojky</div>
-          <div class="svc-dsc">Napojenie na verejný vodovod vrátane zemných prác a vybavenia úradných povolení.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg></div>
-          <div class="svc-ttl">Čerpacie stanice</div>
-          <div class="svc-dsc">Montáž tlakových staníc, hydroforov a čerpacích agregátov pre zásobovanie vodou.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Elektrina -->
-    <div class="tab-panel" id="panel-elektrina" role="tabpanel" aria-labelledby="tab-elektrina">
-      <div class="svc-grid">
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-          <div class="svc-ttl">Elektroinštalačné práce</div>
-          <div class="svc-dsc">Komplexné elektroinštalácie v bytoch, rodinných domoch aj priemyselných objektoch.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.36 6.64a9 9 0 11-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg></div>
-          <div class="svc-ttl">Prípojky NN a VN</div>
-          <div class="svc-dsc">Realizácia prípojok nízkeho a vysokého napätia so všetkými potrebnými povoleniami.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
-          <div class="svc-ttl">Elektrické rozvádzače</div>
-          <div class="svc-dsc">Výroba, montáž a servis elektrických rozvádzačov pre bytové aj komerčné objekty.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div class="svc-ttl">Revízie el. zariadení</div>
-          <div class="svc-dsc">Odborné revízie elektrických inštalácií, spotrebičov a bleskozvodov s vydaním protokolu.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Plyn -->
-    <div class="tab-panel" id="panel-plyn" role="tabpanel" aria-labelledby="tab-plyn">
-      <div class="svc-grid">
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22a7 7 0 007-7c0-5-7-13-7-13S5 10 5 15a7 7 0 007 7z"/><path d="M9 16c0-2 2-4 3-5"/></svg></div>
-          <div class="svc-ttl">Plynové prípojky</div>
-          <div class="svc-dsc">Realizácia plynovodných prípojok k rodinným domom aj prevádzkovým objektom vrátane povolení.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="20" height="12" rx="2"/><path d="M16 9V7a4 4 0 00-8 0v2"/></svg></div>
-          <div class="svc-ttl">Regulačné stanice</div>
-          <div class="svc-dsc">Montáž a servis regulačných staníc plynu podľa platných technických noriem a predpisov.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-          <div class="svc-ttl">Vnútorné rozvody plynu</div>
-          <div class="svc-dsc">Inštalácia plynových rozvodov v interiéroch — od sporáka po plynový kotol v kotolni.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div class="svc-ttl">Revízie a tlaková skúška</div>
-          <div class="svc-dsc">Odborné revízie plynových zariadení a tlakové skúšky potrubí s vydaním dokladov.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ BENEFITY ══ -->
-<section class="benefity" id="benefity">
-  <div class="container">
-    <div class="ben-hdr reveal">
-      <div class="lbl">Prečo my</div>
-      <h2 class="h2">Čo získate s Profinstal</h2>
-      <p class="sub">Vybrali sme riešenia, ktoré prinášajú skutočnú hodnotu — dlhodobo, bezpečne a ekologicky.</p>
-    </div>
-    <div class="ben-grid">
-      <div class="ben-item reveal d1">
-        <div class="ben-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div class="ben-ttl">Dlhodobá spoľahlivosť</div>
-        <div class="ben-dsc">Inštalujeme zariadenia overených výrobcov so zárukou kvality a dlhej životnosti.</div>
-      </div>
-      <div class="ben-item reveal d2">
-        <div class="ben-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <div class="ben-ttl">Rýchly servis</div>
-        <div class="ben-dsc">V prípade havárie zasiahneme do 24 hodín — nemáte čas čakať, my to vieme.</div>
-      </div>
-      <div class="ben-item reveal d3">
-        <div class="ben-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-        <div class="ben-ttl">Úspora nákladov</div>
-        <div class="ben-dsc">Moderné zariadenia znižujú spotrebu energie — mesačná úspora na faktúrach je merateľná.</div>
-      </div>
-      <div class="ben-item reveal d1">
-        <div class="ben-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-        <div class="ben-ttl">Komfort každý deň</div>
-        <div class="ben-dsc">Správne inštalácie znamenajú teplo v zime, chlad v lete a čistú vodu vždy.</div>
-      </div>
-      <div class="ben-item reveal d2">
-        <div class="ben-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div>
-        <div class="ben-ttl">Bezpečnosť</div>
-        <div class="ben-dsc">Certifikovaní technici s platnými oprávneniami — pracujeme bezpečne a podľa noriem.</div>
-      </div>
-      <div class="ben-item reveal d3">
-        <div class="ben-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <div class="ben-ttl">Hodnota nehnuteľnosti</div>
-        <div class="ben-dsc">Moderné inštalácie zvyšujú trhovú hodnotu nehnuteľnosti — dobrá investícia do budúcnosti.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ SERVIS ══ -->
-<section id="servis">
-  <div class="container">
-    <div class="servis-grid">
-      <div class="servis-visual reveal-l">
-        <div class="servis-vtitle">Spoľahlivý servis a revízie</div>
-        <div class="servis-checks">
-          <div class="servis-chk"><div class="chk-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Revízie kotlov a tepelných čerpadiel</div>
-          <div class="servis-chk"><div class="chk-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Revízie klimatizačných zariadení</div>
-          <div class="servis-chk"><div class="chk-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Revízie plynových zariadení</div>
-          <div class="servis-chk"><div class="chk-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Revízie elektroinštalácií</div>
-          <div class="servis-chk"><div class="chk-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Pohotovostný servis pri haváriách</div>
-          <div class="servis-chk"><div class="chk-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Pravidelná údržba zariadení</div>
-        </div>
-      </div>
-
-      <div class="servis-content reveal-r">
-        <div class="lbl">Servis</div>
-        <h2 class="h2">Revízie zaistia bezpečnosť vašej rodiny</h2>
-        <p class="sub">Revízie nie sú len zákonná povinnosť — sú ochranou vás a vašich blízkych. Vykonávame ich odborne a s vydaním všetkých dokladov.</p>
-        <div class="servis-feats">
-          <div class="servis-feat">
-            <div class="servis-feat-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <div>
-              <div class="servis-feat-ttl">Certifikovaní technici</div>
-              <div class="servis-feat-dsc">Všetky práce vykonávajú odborníci s platnými certifikátmi a oprávneniami.</div>
-            </div>
-          </div>
-          <div class="servis-feat">
-            <div class="servis-feat-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-            <div>
-              <div class="servis-feat-ttl">Protokoly uznanené poisťovňami</div>
-              <div class="servis-feat-dsc">Po každej revízii obdržíte protokol platný pre poisťovne aj správcov budov.</div>
-            </div>
-          </div>
-        </div>
-        <div style="margin-top:1.75rem">
-          <a href="#kontakt" class="btn btn-primary">Objednať revíziu</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ REFERENCIE ══ -->
-<section class="referencie" id="referencie">
-  <div class="container">
-    <div class="ref-hdr reveal">
-      <div class="lbl center">Referencie</div>
-      <h2 class="h2">Spokojní zákazníci</h2>
-      <p class="sub" style="margin:0.625rem auto 0;text-align:center;max-width:46ch;">Reálne skúsenosti ľudí, ktorí nám dôverovali.</p>
-    </div>
-    <div class="reviews">
-      <div class="rev-card">
-        <div class="rev-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="rev-txt">„Kúpili sme novostavbu bez inžinierskych sietí a firma nám zabezpečila prípojky vody, kanalizácie a elektriny. Všetko prebehlo načas a bez komplikácií."</p>
-        <div class="rev-author">
-          <div class="rev-av">MH</div>
-          <div><div class="rev-name">Martin Horváth</div><div class="rev-loc">Oravský Podzámok</div></div>
-        </div>
-      </div>
-      <div class="rev-card">
-        <div class="rev-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="rev-txt">„Výmena starého kotla za tepelné čerpadlo prebehla hladko. Technici boli profesionálni, po práci poriadok zachovaný. Vrelo odporúčam!"</p>
-        <div class="rev-author">
-          <div class="rev-av">LK</div>
-          <div><div class="rev-name">Lucia Kováčová</div><div class="rev-loc">Dolný Kubín</div></div>
-        </div>
-      </div>
-      <div class="rev-card">
-        <div class="rev-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="rev-txt">„Zavolal som kvôli havarijnej situácii s vodovodom. Prišli do 3 hodín, opravili a všetko vysvetlili. Skvelý prístup, cena férová."</p>
-        <div class="rev-author">
-          <div class="rev-av">PB</div>
-          <div><div class="rev-name">Peter Belák</div><div class="rev-loc">Námestovo</div></div>
-        </div>
-      </div>
-      <div class="rev-card">
-        <div class="rev-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="rev-txt">„Celá rekonštrukcia elektriky v rodinnom dome. Presné, čisté, bez komplikácií. Revízny protokol sme dostali ihneď po skončení prác."</p>
-        <div class="rev-author">
-          <div class="rev-av">AS</div>
-          <div><div class="rev-name">Anna Sedláčková</div><div class="rev-loc">Trstená</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ FAQ ══ -->
-<section id="faq">
-  <div class="container">
-    <div class="faq-layout">
-      <div class="reveal">
-        <div class="lbl">FAQ</div>
-        <h2 class="h2">Časté otázky</h2>
-        <p class="sub">Odpovede na to, čo zákazníkov zaujíma najčastejšie.</p>
-        <div style="margin-top:1.75rem">
-          <a href="#kontakt" class="btn btn-ghost">Ďalšia otázka? Napíšte nám</a>
-        </div>
-      </div>
-      <div class="reveal d2">
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Aká je cena vašich služieb?
-            <div class="faq-tog" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Cena závisí od rozsahu prác a použitých materiálov. Po bezplatnej obhliadke vám pripravíme nezáväznú cenovú ponuku na mieru. Neplatíte nič, kým sa nerozhodnete.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Ako dlho trvajú práce?
-            <div class="faq-tog" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Závisí od typu práce. Menšie opravy vykonáme na počkanie, komplexné inštalácie zvyčajne trvajú niekoľko dní. Presný harmonogram dostanete pri cenovej ponuke.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Riešite aj havárie a pohotovosti?
-            <div class="faq-tog" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Áno, v prípade havárie vody, plynu či kúrenia nás kontaktujte — snažíme sa zasiahnuť čo najskôr. V urgentných prípadoch volajte priamo na +421 949 104 281.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Aké značky a materiály používate?
-            <div class="faq-tog" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Pracujeme s overenými značkami Tech, Samsung, SFOS, Daikin, Grundfos a ďalšími podľa preferencií zákazníka. Poradíme vám s výberom najlepšieho riešenia.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Poskytujete záruku na práce?
-            <div class="faq-tog" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Áno, na všetky inštalačné práce a servis poskytujeme záruku v súlade s platnou legislatívou. Podmienky záruky sú vždy súčasťou zmluvy.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-            Robíte aj pravidelné revízie?
-            <div class="faq-tog" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Áno, vykonávame pravidelné revízie kotlov, tepelných čerpadiel, klimatizácií, plynových aj elektrických zariadení. Po každej revízii vydáme protokol uznaný poisťovňami.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ PARTNERI ══ -->
-<section class="partneri">
-  <div class="container">
-    <div class="par-hdr reveal">
-      <div class="lbl center">Partneri</div>
-      <p class="sub" style="text-align:center;margin:0 auto;">Spolupracujeme s overenými výrobcami a dodávateľmi.</p>
-    </div>
-    <div class="partners reveal d2">
-      <div class="partner-tag">TECH</div>
-      <div class="partner-tag">SAMSUNG</div>
-      <div class="partner-tag">SFOS</div>
-      <div class="partner-tag">DAIKIN</div>
-      <div class="partner-tag">GRUNDFOS</div>
-      <div class="partner-tag">VIESSMANN</div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ KONTAKT ══ -->
-<section id="kontakt">
-  <div class="container">
-    <div class="kontakt-grid">
-      <div class="contact-info reveal-l">
-        <div class="lbl">Kontakt</div>
-        <h2 class="h2">Sme tu pre vás</h2>
-        <p class="sub">Neváhajte nás kontaktovať — radi poradíme, odpovieme na otázky alebo dohodneme obhliadku zadarmo.</p>
-        <div class="ci-list">
-          <div class="ci-item">
-            <div class="ci-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.9a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-            <div>
-              <div class="ci-lbl">Telefón</div>
-              <div class="ci-val"><a href="tel:+421949104281">+421 949 104 281</a></div>
-              <div style="font-size:0.78rem;color:var(--gray);margin-top:0.125rem">Pondelok – Piatok: 8:00 – 18:00</div>
-            </div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-            <div>
-              <div class="ci-lbl">E-mail</div>
-              <div class="ci-val"><a href="mailto:info@profinstal.sk">info@profinstal.sk</a></div>
-            </div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div>
-              <div class="ci-lbl">Adresa</div>
-              <div class="ci-val">Výhon 1940<br>027 55 Krivá, Slovensko</div>
-            </div>
-          </div>
-        </div>
-        <div class="soc-links">
-          <a href="#" class="soc-link" aria-label="Facebook" rel="noopener">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-          </a>
-          <a href="#" class="soc-link" aria-label="Instagram" rel="noopener">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="cform reveal-r">
-        <div class="cform-ttl">Napíšte nám</div>
-        <form onsubmit="handleForm(event)" novalidate>
-          <div class="frow">
-            <div class="fg">
-              <label class="flbl" for="fn">Meno <span class="req">*</span></label>
-              <input class="finput" type="text" id="fn" name="fn" required placeholder="Ján Novák" autocomplete="name">
-            </div>
-            <div class="fg">
-              <label class="flbl" for="ftel">Telefón <span class="req">*</span></label>
-              <input class="finput" type="tel" id="ftel" name="ftel" required placeholder="+421 9xx xxx xxx" autocomplete="tel">
-            </div>
-          </div>
-          <div class="fg">
-            <label class="flbl" for="femail">E-mail</label>
-            <input class="finput" type="email" id="femail" name="femail" placeholder="jan@domena.sk" autocomplete="email">
-          </div>
-          <div class="fg">
-            <label class="flbl" for="fcat">Typ služby</label>
-            <select class="fselect" id="fcat" name="fcat">
-              <option value="">— Vyberte kategóriu —</option>
-              <option value="teplo">Teplo a chladenie</option>
-              <option value="voda">Voda a odpad</option>
-              <option value="elektrina">Elektrina</option>
-              <option value="plyn">Plyn</option>
-              <option value="revizia">Servis a revízie</option>
-            </select>
-          </div>
-          <div class="fg">
-            <label class="flbl" for="fmsg">Správa <span class="req">*</span></label>
-            <textarea class="ftextarea" id="fmsg" name="fmsg" required placeholder="Popíšte čo potrebujete..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary fsub" id="fsub">
-            Odoslať správu
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
-          <div class="fok" id="fok">Správa odoslaná! Ozveme sa vám čoskoro.</div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ FOOTER ══ -->
-<footer>
-  <div class="container">
-    <div class="foot-grid">
-      <div>
-        <div class="foot-logo">
+  <!-- ══ HEADER ══ -->
+  <header class="hdr" id="hdr">
+    <div class="container">
+      <div class="hdr-inner">
+        <a href="#" class="logo" aria-label="Profinstal – domov">
           <img src="logo.jpg" alt="Profinstal logo">
-          <span class="foot-logo-txt">PROFINSTAL</span>
-        </div>
-        <p class="foot-about">Spoľahlivé inštalácie kúrenia, vody, elektriny a plynu pre domácnosti aj firmy na Orave a okolí.</p>
-        <div class="foot-soc">
-          <a href="#" aria-label="Facebook" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-          <a href="#" aria-label="Instagram" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-        </div>
-      </div>
-      <div>
-        <div class="foot-col-ttl">Navigácia</div>
-        <div class="foot-links">
+          <span class="logo-txt">PROFINSTAL</span>
+        </a>
+
+        <nav class="nav-desk" aria-label="Hlavná navigácia">
           <a href="#sluzby">Služby</a>
-          <a href="#postup">Postup práce</a>
+          <a href="#postup">Postup</a>
           <a href="#benefity">Benefity</a>
           <a href="#referencie">Referencie</a>
-          <a href="#faq">Časté otázky</a>
-          <a href="#kontakt">Kontakt</a>
-        </div>
-      </div>
-      <div>
-        <div class="foot-col-ttl">Kontakt</div>
-        <div class="foot-links">
-          <a href="tel:+421949104281">+421 949 104 281</a>
-          <a href="mailto:info@profinstal.sk">info@profinstal.sk</a>
-          <span>Výhon 1940</span>
-          <span>027 55 Krivá</span>
-          <span>Po – Pia: 8:00 – 18:00</span>
+          <a href="#faq">Otázky</a>
+        </nav>
+
+        <div class="hdr-right">
+          <a href="tel:+421949104281" class="tel-btn" aria-label="Zavolajte nám">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.9a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            <span class="tel-num">+421 949 104 281</span>
+          </a>
+          <a href="#kontakt" class="btn btn-primary cta-hdr">Kontaktujte nás</a>
+          <button class="burger" id="burger" aria-label="Otvoriť menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
     </div>
-    <div class="foot-bottom">
-      <div class="foot-copy">© 2025 Profinstal. Všetky práva vyhradené.</div>
-      <div class="foot-bot-links">
-        <a href="#">Ochrana osobných údajov</a>
-        <a href="#">Cookies</a>
-      </div>
+  </header>
+
+  <!-- ══ MOBILE MENU ══ -->
+  <div class="mob-menu" id="mob-menu" aria-hidden="true" role="dialog" aria-label="Navigácia">
+    <nav class="mob-nav">
+      <a href="#sluzby" onclick="closeMenu()">Služby <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6" />
+        </svg></a>
+      <a href="#postup" onclick="closeMenu()">Postup <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6" />
+        </svg></a>
+      <a href="#benefity" onclick="closeMenu()">Benefity <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6" />
+        </svg></a>
+      <a href="#referencie" onclick="closeMenu()">Referencie <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6" />
+        </svg></a>
+      <a href="#faq" onclick="closeMenu()">Otázky <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6" />
+        </svg></a>
+      <a href="#kontakt" onclick="closeMenu()">Kontakt <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6" />
+        </svg></a>
+    </nav>
+    <div class="mob-contact">
+      <p>Zavolajte nám</p>
+      <a href="tel:+421949104281">+421 949 104 281</a>
     </div>
   </div>
-</footer>
 
-<script>
-// ── Header scroll shadow
-const hdr = document.getElementById('hdr');
-window.addEventListener('scroll', () => {
-  hdr.classList.toggle('scrolled', window.scrollY > 8);
-}, { passive: true });
+  <!-- ══ HERO ══ -->
+  <section class="hero" aria-label="Úvodná sekcia">
+    <div class="container hero-wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Spoľahlivé inštalácie od roku 2020
+          </div>
+          <h1 class="hero-h1">
+            Kompletné inštalácie
+            <span>pre váš domov.</span>
+          </h1>
+          <p class="hero-p">Kúrenie, voda, elektrina aj plyn — zabezpečíme rýchlo, bezpečne a profesionálne. Prídeme,
+            poradíme, urobíme.</p>
+          <div class="hero-btns">
+            <a href="#kontakt" class="btn btn-primary">
+              Nezáväzná konzultácia
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </a>
+            <a href="tel:+421949104281" class="btn btn-outline">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.9a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+              </svg>
+              Zavolať
+            </a>
+          </div>
+        </div>
 
-// ── Mobile menu
-const burger = document.getElementById('burger');
-const mobMenu = document.getElementById('mob-menu');
-let menuOpen = false;
+        <!-- Quick-access category buttons -->
+        <div class="cat-grid" role="group" aria-label="Rýchly prístup ku kategóriám">
+          <button class="cat-btn" onclick="goTab('teplo')" aria-label="Teplo a chladenie">
+            <div class="cat-ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <path d="M12 2S8 7 8 12a4 4 0 008 0c0-5-4-10-4-10z" />
+                <path d="M12 12a2 2 0 000 4" />
+              </svg>
+            </div>
+            <span class="cat-title">Teplo a chladenie</span>
+            <span class="cat-sub">Čerpadlá, klimatizácie, kotly</span>
+          </button>
+          <button class="cat-btn" onclick="goTab('voda')" aria-label="Voda a odpad">
+            <div class="cat-ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <path d="M12 2L5 11a7 7 0 1014 0L12 2z" />
+              </svg>
+            </div>
+            <span class="cat-title">Voda a odpad</span>
+            <span class="cat-sub">Vodoinštalácie, odpady</span>
+          </button>
+          <button class="cat-btn" onclick="goTab('elektrina')" aria-label="Elektrina">
+            <div class="cat-ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+            </div>
+            <span class="cat-title">Elektrina</span>
+            <span class="cat-sub">Elektroinštalácie, prípojky NN/VN</span>
+          </button>
+          <button class="cat-btn" onclick="goTab('plyn')" aria-label="Plyn">
+            <div class="cat-ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <path d="M12 22a7 7 0 007-7c0-5-7-13-7-13S5 10 5 15a7 7 0 007 7z" />
+                <path d="M9 16c0-2 2-4 3-5" />
+              </svg>
+            </div>
+            <span class="cat-title">Plyn</span>
+            <span class="cat-sub">Prípojky, regulačné stanice</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-function closeMenu() {
-  menuOpen = false;
-  burger.classList.remove('open');
-  mobMenu.classList.remove('open');
-  mobMenu.setAttribute('aria-hidden', 'true');
-  burger.setAttribute('aria-expanded', 'false');
-  document.body.style.overflow = '';
-}
+  <!-- ══ POSTUP ══ -->
+  <section class="postup" id="postup">
+    <div class="container">
+      <div class="postup-hdr reveal">
+        <div class="lbl center">Ako pracujeme</div>
+        <h2 class="h2">4 jednoduché kroky</h2>
+        <p class="sub" style="margin:0.625rem auto 0;text-align:center;">Od prvého kontaktu po dokončenú prácu — všetko
+          riadime my.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal d1">
+          <div class="step-num">01</div>
+          <div>
+            <div class="step-ttl">Zavoláte alebo napíšete</div>
+            <div class="step-dsc">Kontaktujte nás — opíšte čo potrebujete a my sa ozveme do 24 hodín.</div>
+          </div>
+        </div>
+        <div class="step reveal d2">
+          <div class="step-num">02</div>
+          <div>
+            <div class="step-ttl">Obhliadka a ponuka</div>
+            <div class="step-dsc">Dohodneme termín, prídeme na miesto, poradíme a vystavíme cenovú ponuku.</div>
+          </div>
+        </div>
+        <div class="step reveal d3">
+          <div class="step-num">03</div>
+          <div>
+            <div class="step-ttl">Realizácia</div>
+            <div class="step-dsc">Vykonáme prácu rýchlo a zodpovedne, s dôrazom na kvalitu a bezpečnosť.</div>
+          </div>
+        </div>
+        <div class="step reveal d4">
+          <div class="step-num">04</div>
+          <div>
+            <div class="step-ttl">Servis a záruka</div>
+            <div class="step-dsc">Na všetky práce dávame záruku a zostávame k dispozícii pre servis.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-burger.addEventListener('click', () => {
-  menuOpen = !menuOpen;
-  burger.classList.toggle('open', menuOpen);
-  mobMenu.classList.toggle('open', menuOpen);
-  mobMenu.setAttribute('aria-hidden', String(!menuOpen));
-  burger.setAttribute('aria-expanded', String(menuOpen));
-  document.body.style.overflow = menuOpen ? 'hidden' : '';
-});
+  <!-- ══ SLUZBY ══ -->
+  <section id="sluzby">
+    <div class="container">
+      <div class="sluzby-hdr reveal">
+        <div class="lbl">Čo robíme</div>
+        <h2 class="h2">Naše služby</h2>
+        <p class="sub">Komplexné riešenia pre váš domov aj podnik — od kúrenia po elektrinu.</p>
+      </div>
 
-document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuOpen) closeMenu(); });
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" id="tab-teplo" role="tab" aria-selected="true" aria-controls="panel-teplo"
+          onclick="switchTab('teplo')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M12 2S8 7 8 12a4 4 0 008 0c0-5-4-10-4-10z" />
+          </svg>
+          Teplo a chladenie
+        </button>
+        <button class="tab-btn" id="tab-voda" role="tab" aria-selected="false" aria-controls="panel-voda"
+          onclick="switchTab('voda')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M12 2L5 11a7 7 0 1014 0L12 2z" />
+          </svg>
+          Voda a odpad
+        </button>
+        <button class="tab-btn" id="tab-elektrina" role="tab" aria-selected="false" aria-controls="panel-elektrina"
+          onclick="switchTab('elektrina')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
+          Elektrina
+        </button>
+        <button class="tab-btn" id="tab-plyn" role="tab" aria-selected="false" aria-controls="panel-plyn"
+          onclick="switchTab('plyn')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M12 22a7 7 0 007-7c0-5-7-13-7-13S5 10 5 15a7 7 0 007 7z" />
+          </svg>
+          Plyn
+        </button>
+      </div>
 
-// ── Scroll reveal (single IntersectionObserver)
-const revObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('on');
-      revObs.unobserve(e.target);
+      <!-- Teplo -->
+      <div class="tab-panel active" id="panel-teplo" role="tabpanel" aria-labelledby="tab-teplo">
+        <div class="svc-grid">
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round">
+                <path d="M12 2S8 7 8 12a4 4 0 008 0c0-5-4-10-4-10z" />
+              </svg></div>
+            <div class="svc-ttl">Tepelné čerpadlá</div>
+            <div class="svc-dsc">Inštalácia a servis vzduch-voda, voda-voda aj zem-voda tepelných čerpadiel od
+              popredných výrobcov.</div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18M3 15h18" />
+              </svg></div>
+            <div class="svc-ttl">Klimatizácie</div>
+            <div class="svc-dsc">Montáž klimatizačných jednotiek pre chladenie aj kúrenie — rýchlo a čisto, s minimálnym
+              zásahom.</div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M22 12H2M12 2v20" />
+                <circle cx="12" cy="12" r="3" />
+              </svg></div>
+            <div class="svc-ttl">Podlahové kúrenie</div>
+            <div class="svc-dsc">Elektrické aj vodné podlahové vykurovanie s termostatickou reguláciou teploty v každej
+              miestnosti.</div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <rect x="6" y="3" width="12" height="18" rx="1" />
+                <path d="M9 7h6M9 11h6M9 15h6" />
+              </svg></div>
+            <div class="svc-ttl">Kotly a bojlery</div>
+            <div class="svc-dsc">Inštalácia, výmena a servis plynových, elektrických aj tuhopálivových kotlov a
+              zásobníkov TÚV.</div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path
+                  d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+              </svg></div>
+            <div class="svc-ttl">Rekuperácie</div>
+            <div class="svc-dsc">Riadené vetranie so spätným získavaním tepla pre zdravý vzduch bez úniku energie.</div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg></div>
+            <div class="svc-ttl">Revízie a servis</div>
+            <div class="svc-dsc">Pravidelné revízie tepelných zariadení podľa platnej legislatívy s vydaním protokolu.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Voda -->
+      <div class="tab-panel" id="panel-voda" role="tabpanel" aria-labelledby="tab-voda">
+        <div class="svc-grid">
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round">
+                <path d="M5 12h14M5 12a2 2 0 01-2-2V6h18v4a2 2 0 01-2 2M5 12v5a2 2 0 002 2h10a2 2 0 002-2v-5" />
+              </svg></div>
+            <div class="svc-ttl">Vodoinštalácie</div>
+            <div class="svc-dsc">Kompletné rozvody vody od prípojky až po batérie — novostavby aj rekonštrukcie bytov a
+              domov.</div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M12 22L5 15l7-7 7 7-7 7z" />
+                <path d="M12 8V2" />
+              </svg></div>
+            <div class="svc-ttl">Kanalizácia a odpady</div>
+            <div class="svc-dsc">Inštalácia odpadových potrubí, revíznych šácht a čistenie upchatej kanalizácie.</div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              </svg></div>
+            <div class="svc-ttl">Vodovodné prípojky</div>
+            <div class="svc-dsc">Napojenie na verejný vodovod vrátane zemných prác a vybavenia úradných povolení.</div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4" />
+              </svg></div>
+            <div class="svc-ttl">Čerpacie stanice</div>
+            <div class="svc-dsc">Montáž tlakových staníc, hydroforov a čerpacích agregátov pre zásobovanie vodou.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Elektrina -->
+      <div class="tab-panel" id="panel-elektrina" role="tabpanel" aria-labelledby="tab-elektrina">
+        <div class="svc-grid">
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg></div>
+            <div class="svc-ttl">Elektroinštalačné práce</div>
+            <div class="svc-dsc">Komplexné elektroinštalácie v bytoch, rodinných domoch aj priemyselných objektoch.
+            </div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M18.36 6.64a9 9 0 11-12.73 0" />
+                <line x1="12" y1="2" x2="12" y2="12" />
+              </svg></div>
+            <div class="svc-ttl">Prípojky NN a VN</div>
+            <div class="svc-dsc">Realizácia prípojok nízkeho a vysokého napätia so všetkými potrebnými povoleniami.
+            </div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+              </svg></div>
+            <div class="svc-ttl">Elektrické rozvádzače</div>
+            <div class="svc-dsc">Výroba, montáž a servis elektrických rozvádzačov pre bytové aj komerčné objekty.</div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg></div>
+            <div class="svc-ttl">Revízie el. zariadení</div>
+            <div class="svc-dsc">Odborné revízie elektrických inštalácií, spotrebičov a bleskozvodov s vydaním
+              protokolu.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plyn -->
+      <div class="tab-panel" id="panel-plyn" role="tabpanel" aria-labelledby="tab-plyn">
+        <div class="svc-grid">
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round">
+                <path d="M12 22a7 7 0 007-7c0-5-7-13-7-13S5 10 5 15a7 7 0 007 7z" />
+                <path d="M9 16c0-2 2-4 3-5" />
+              </svg></div>
+            <div class="svc-ttl">Plynové prípojky</div>
+            <div class="svc-dsc">Realizácia plynovodných prípojok k rodinným domom aj prevádzkovým objektom vrátane
+              povolení.</div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <rect x="2" y="9" width="20" height="12" rx="2" />
+                <path d="M16 9V7a4 4 0 00-8 0v2" />
+              </svg></div>
+            <div class="svc-ttl">Regulačné stanice</div>
+            <div class="svc-dsc">Montáž a servis regulačných staníc plynu podľa platných technických noriem a predpisov.
+            </div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg></div>
+            <div class="svc-ttl">Vnútorné rozvody plynu</div>
+            <div class="svc-dsc">Inštalácia plynových rozvodov v interiéroch — od sporáka po plynový kotol v kotolni.
+            </div>
+          </div>
+          <div class="svc-card">
+            <div class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg></div>
+            <div class="svc-ttl">Revízie a tlaková skúška</div>
+            <div class="svc-dsc">Odborné revízie plynových zariadení a tlakové skúšky potrubí s vydaním dokladov.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ BENEFITY ══ -->
+  <section class="benefity" id="benefity">
+    <div class="container">
+      <div class="ben-hdr reveal">
+        <div class="lbl">Prečo my</div>
+        <h2 class="h2">Čo získate s Profinstal</h2>
+        <p class="sub">Vybrali sme riešenia, ktoré prinášajú skutočnú hodnotu — dlhodobo, bezpečne a ekologicky.</p>
+      </div>
+      <div class="ben-grid">
+        <div class="ben-item reveal d1">
+          <div class="ben-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg></div>
+          <div class="ben-ttl">Dlhodobá spoľahlivosť</div>
+          <div class="ben-dsc">Inštalujeme zariadenia overených výrobcov so zárukou kvality a dlhej životnosti.</div>
+        </div>
+        <div class="ben-item reveal d2">
+          <div class="ben-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg></div>
+          <div class="ben-ttl">Rýchly servis</div>
+          <div class="ben-dsc">V prípade havárie zasiahneme do 24 hodín — nemáte čas čakať, my to vieme.</div>
+        </div>
+        <div class="ben-item reveal d3">
+          <div class="ben-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23" />
+              <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+            </svg></div>
+          <div class="ben-ttl">Úspora nákladov</div>
+          <div class="ben-dsc">Moderné zariadenia znižujú spotrebu energie — mesačná úspora na faktúrach je merateľná.
+          </div>
+        </div>
+        <div class="ben-item reveal d1">
+          <div class="ben-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+            </svg></div>
+          <div class="ben-ttl">Komfort každý deň</div>
+          <div class="ben-dsc">Správne inštalácie znamenajú teplo v zime, chlad v lete a čistú vodu vždy.</div>
+        </div>
+        <div class="ben-item reveal d2">
+          <div class="ben-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z" />
+              <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" />
+            </svg></div>
+          <div class="ben-ttl">Bezpečnosť</div>
+          <div class="ben-dsc">Certifikovaní technici s platnými oprávneniami — pracujeme bezpečne a podľa noriem.</div>
+        </div>
+        <div class="ben-item reveal d3">
+          <div class="ben-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg></div>
+          <div class="ben-ttl">Hodnota nehnuteľnosti</div>
+          <div class="ben-dsc">Moderné inštalácie zvyšujú trhovú hodnotu nehnuteľnosti — dobrá investícia do budúcnosti.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SERVIS ══ -->
+  <section id="servis">
+    <div class="container">
+      <div class="servis-grid">
+        <div class="servis-visual reveal-l">
+          <div class="servis-vtitle">Spoľahlivý servis a revízie</div>
+          <div class="servis-checks">
+            <div class="servis-chk">
+              <div class="chk-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>Revízie kotlov a tepelných čerpadiel
+            </div>
+            <div class="servis-chk">
+              <div class="chk-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>Revízie klimatizačných zariadení
+            </div>
+            <div class="servis-chk">
+              <div class="chk-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>Revízie plynových zariadení
+            </div>
+            <div class="servis-chk">
+              <div class="chk-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>Revízie elektroinštalácií
+            </div>
+            <div class="servis-chk">
+              <div class="chk-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>Pohotovostný servis pri haváriách
+            </div>
+            <div class="servis-chk">
+              <div class="chk-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>Pravidelná údržba zariadení
+            </div>
+          </div>
+        </div>
+
+        <div class="servis-content reveal-r">
+          <div class="lbl">Servis</div>
+          <h2 class="h2">Revízie zaistia bezpečnosť vašej rodiny</h2>
+          <p class="sub">Revízie nie sú len zákonná povinnosť — sú ochranou vás a vašich blízkych. Vykonávame ich
+            odborne a s vydaním všetkých dokladov.</p>
+          <div class="servis-feats">
+            <div class="servis-feat">
+              <div class="servis-feat-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg></div>
+              <div>
+                <div class="servis-feat-ttl">Certifikovaní technici</div>
+                <div class="servis-feat-dsc">Všetky práce vykonávajú odborníci s platnými certifikátmi a oprávneniami.
+                </div>
+              </div>
+            </div>
+            <div class="servis-feat">
+              <div class="servis-feat-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                </svg></div>
+              <div>
+                <div class="servis-feat-ttl">Protokoly uznanené poisťovňami</div>
+                <div class="servis-feat-dsc">Po každej revízii obdržíte protokol platný pre poisťovne aj správcov budov.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:1.75rem">
+            <a href="#kontakt" class="btn btn-primary">Objednať revíziu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ REFERENCIE ══ -->
+  <section class="referencie" id="referencie">
+    <div class="container">
+      <div class="ref-hdr reveal">
+        <div class="lbl center">Referencie</div>
+        <h2 class="h2">Spokojní zákazníci</h2>
+        <p class="sub" style="margin:0.625rem auto 0;text-align:center;max-width:46ch;">Reálne skúsenosti ľudí, ktorí
+          nám dôverovali.</p>
+      </div>
+      <div class="reviews">
+        <div class="rev-card">
+          <div class="rev-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="rev-txt">„Kúpili sme novostavbu bez inžinierskych sietí a firma nám zabezpečila prípojky vody,
+            kanalizácie a elektriny. Všetko prebehlo načas a bez komplikácií."</p>
+          <div class="rev-author">
+            <div class="rev-av">MH</div>
+            <div>
+              <div class="rev-name">Martin Horváth</div>
+              <div class="rev-loc">Oravský Podzámok</div>
+            </div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rev-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="rev-txt">„Výmena starého kotla za tepelné čerpadlo prebehla hladko. Technici boli profesionálni, po
+            práci poriadok zachovaný. Vrelo odporúčam!"</p>
+          <div class="rev-author">
+            <div class="rev-av">LK</div>
+            <div>
+              <div class="rev-name">Lucia Kováčová</div>
+              <div class="rev-loc">Dolný Kubín</div>
+            </div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rev-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="rev-txt">„Zavolal som kvôli havarijnej situácii s vodovodom. Prišli do 3 hodín, opravili a všetko
+            vysvetlili. Skvelý prístup, cena férová."</p>
+          <div class="rev-author">
+            <div class="rev-av">PB</div>
+            <div>
+              <div class="rev-name">Peter Belák</div>
+              <div class="rev-loc">Námestovo</div>
+            </div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rev-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="rev-txt">„Celá rekonštrukcia elektriky v rodinnom dome. Presné, čisté, bez komplikácií. Revízny
+            protokol sme dostali ihneď po skončení prác."</p>
+          <div class="rev-author">
+            <div class="rev-av">AS</div>
+            <div>
+              <div class="rev-name">Anna Sedláčková</div>
+              <div class="rev-loc">Trstená</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FAQ ══ -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq-layout">
+        <div class="reveal">
+          <div class="lbl">FAQ</div>
+          <h2 class="h2">Časté otázky</h2>
+          <p class="sub">Odpovede na to, čo zákazníkov zaujíma najčastejšie.</p>
+          <div style="margin-top:1.75rem">
+            <a href="#kontakt" class="btn btn-ghost">Ďalšia otázka? Napíšte nám</a>
+          </div>
+        </div>
+        <div class="reveal d2">
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+              Aká je cena vašich služieb?
+              <div class="faq-tog" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg></div>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">Cena závisí od rozsahu prác a použitých materiálov. Po bezplatnej obhliadke vám
+                pripravíme nezáväznú cenovú ponuku na mieru. Neplatíte nič, kým sa nerozhodnete.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+              Ako dlho trvajú práce?
+              <div class="faq-tog" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg></div>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">Závisí od typu práce. Menšie opravy vykonáme na počkanie, komplexné inštalácie
+                zvyčajne trvajú niekoľko dní. Presný harmonogram dostanete pri cenovej ponuke.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+              Riešite aj havárie a pohotovosti?
+              <div class="faq-tog" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg></div>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">Áno, v prípade havárie vody, plynu či kúrenia nás kontaktujte — snažíme sa
+                zasiahnuť čo najskôr. V urgentných prípadoch volajte priamo na +421 949 104 281.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+              Aké značky a materiály používate?
+              <div class="faq-tog" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg></div>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">Pracujeme s overenými značkami Tech, Samsung, SFOS, Daikin, Grundfos a ďalšími
+                podľa preferencií zákazníka. Poradíme vám s výberom najlepšieho riešenia.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+              Poskytujete záruku na práce?
+              <div class="faq-tog" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg></div>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">Áno, na všetky inštalačné práce a servis poskytujeme záruku v súlade s platnou
+                legislatívou. Podmienky záruky sú vždy súčasťou zmluvy.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+              Robíte aj pravidelné revízie?
+              <div class="faq-tog" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg></div>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">Áno, vykonávame pravidelné revízie kotlov, tepelných čerpadiel, klimatizácií,
+                plynových aj elektrických zariadení. Po každej revízii vydáme protokol uznaný poisťovňami.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PARTNERI ══ -->
+  <section class="partneri">
+    <div class="container">
+      <div class="par-hdr reveal">
+        <div class="lbl center">Partneri</div>
+        <p class="sub" style="text-align:center;margin:0 auto;">Spolupracujeme s overenými výrobcami a dodávateľmi.</p>
+      </div>
+      <div class="partners reveal d2">
+        <div class="partner-tag">TECH</div>
+        <div class="partner-tag">SAMSUNG</div>
+        <div class="partner-tag">SFOS</div>
+        <div class="partner-tag">DAIKIN</div>
+        <div class="partner-tag">GRUNDFOS</div>
+        <div class="partner-tag">VIESSMANN</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ KONTAKT ══ -->
+  <section id="kontakt">
+    <div class="container">
+      <div class="kontakt-grid">
+        <div class="contact-info reveal-l">
+          <div class="lbl">Kontakt</div>
+          <h2 class="h2">Sme tu pre vás</h2>
+          <p class="sub">Neváhajte nás kontaktovať — radi poradíme, odpovieme na otázky alebo dohodneme obhliadku
+            zadarmo.</p>
+          <div class="ci-list">
+            <div class="ci-item">
+              <div class="ci-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.9a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                </svg></div>
+              <div>
+                <div class="ci-lbl">Telefón</div>
+                <div class="ci-val"><a href="tel:+421949104281">+421 949 104 281</a></div>
+                <div style="font-size:0.78rem;color:var(--gray);margin-top:0.125rem">Pondelok – Piatok: 8:00 – 18:00
+                </div>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg></div>
+              <div>
+                <div class="ci-lbl">E-mail</div>
+                <div class="ci-val"><a href="mailto:info@profinstal.sk">info@profinstal.sk</a></div>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg></div>
+              <div>
+                <div class="ci-lbl">Adresa</div>
+                <div class="ci-val">Výhon 1940<br>027 55 Krivá, Slovensko</div>
+              </div>
+            </div>
+          </div>
+          <div class="soc-links">
+            <a href="#" class="soc-link" aria-label="Facebook" rel="noopener">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+            </a>
+            <a href="#" class="soc-link" aria-label="Instagram" rel="noopener">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="cform reveal-r">
+          <div class="cform-ttl">Napíšte nám</div>
+          <form onsubmit="handleForm(event)" novalidate>
+            <div class="frow">
+              <div class="fg">
+                <label class="flbl" for="fn">Meno <span class="req">*</span></label>
+                <input class="finput" type="text" id="fn" name="fn" required placeholder="Ján Novák"
+                  autocomplete="name">
+              </div>
+              <div class="fg">
+                <label class="flbl" for="ftel">Telefón <span class="req">*</span></label>
+                <input class="finput" type="tel" id="ftel" name="ftel" required placeholder="+421 9xx xxx xxx"
+                  autocomplete="tel">
+              </div>
+            </div>
+            <div class="fg">
+              <label class="flbl" for="femail">E-mail</label>
+              <input class="finput" type="email" id="femail" name="femail" placeholder="jan@domena.sk"
+                autocomplete="email">
+            </div>
+            <div class="fg">
+              <label class="flbl" for="fcat">Typ služby</label>
+              <select class="fselect" id="fcat" name="fcat">
+                <option value="">— Vyberte kategóriu —</option>
+                <option value="teplo">Teplo a chladenie</option>
+                <option value="voda">Voda a odpad</option>
+                <option value="elektrina">Elektrina</option>
+                <option value="plyn">Plyn</option>
+                <option value="revizia">Servis a revízie</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label class="flbl" for="fmsg">Správa <span class="req">*</span></label>
+              <textarea class="ftextarea" id="fmsg" name="fmsg" required
+                placeholder="Popíšte čo potrebujete..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary fsub" id="fsub">
+              Odoslať správu
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+            <div class="fok" id="fok">Správa odoslaná! Ozveme sa vám čoskoro.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-logo">
+            <img src="logo.jpg" alt="Profinstal logo">
+            <span class="foot-logo-txt">PROFINSTAL</span>
+          </div>
+          <p class="foot-about">Spoľahlivé inštalácie kúrenia, vody, elektriny a plynu pre domácnosti aj firmy na Orave
+            a okolí.</p>
+          <div class="foot-soc">
+            <a href="#" aria-label="Facebook" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg></a>
+            <a href="#" aria-label="Instagram" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="foot-col-ttl">Navigácia</div>
+          <div class="foot-links">
+            <a href="#sluzby">Služby</a>
+            <a href="#postup">Postup práce</a>
+            <a href="#benefity">Benefity</a>
+            <a href="#referencie">Referencie</a>
+            <a href="#faq">Časté otázky</a>
+            <a href="#kontakt">Kontakt</a>
+          </div>
+        </div>
+        <div>
+          <div class="foot-col-ttl">Kontakt</div>
+          <div class="foot-links">
+            <a href="tel:+421949104281">+421 949 104 281</a>
+            <a href="mailto:info@profinstal.sk">info@profinstal.sk</a>
+            <span>Výhon 1940</span>
+            <span>027 55 Krivá</span>
+            <span>Po – Pia: 8:00 – 18:00</span>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <div class="foot-copy">© 2025 Profinstal. Všetky práva vyhradené.</div>
+        <div class="foot-bot-links">
+          <a href="#">Ochrana osobných údajov</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── Header scroll shadow
+    const hdr = document.getElementById('hdr');
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('scrolled', window.scrollY > 8);
+    }, { passive: true });
+
+    // ── Mobile menu
+    const burger = document.getElementById('burger');
+    const mobMenu = document.getElementById('mob-menu');
+    let menuOpen = false;
+
+    function closeMenu() {
+      menuOpen = false;
+      burger.classList.remove('open');
+      mobMenu.classList.remove('open');
+      mobMenu.setAttribute('aria-hidden', 'true');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
     }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -36px 0px' });
 
-document.querySelectorAll('.reveal, .reveal-l, .reveal-r, .step').forEach(el => revObs.observe(el));
+    burger.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      burger.classList.toggle('open', menuOpen);
+      mobMenu.classList.toggle('open', menuOpen);
+      mobMenu.setAttribute('aria-hidden', String(!menuOpen));
+      burger.setAttribute('aria-expanded', String(menuOpen));
+      document.body.style.overflow = menuOpen ? 'hidden' : '';
+    });
 
-// ── Service tabs
-function switchTab(id) {
-  document.querySelectorAll('.tab-btn').forEach(b => {
-    b.classList.remove('active');
-    b.setAttribute('aria-selected', 'false');
-  });
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  const btn = document.getElementById('tab-' + id);
-  const panel = document.getElementById('panel-' + id);
-  if (btn)   { btn.classList.add('active'); btn.setAttribute('aria-selected', 'true'); }
-  if (panel) panel.classList.add('active');
-}
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuOpen) closeMenu(); });
 
-// Hero category buttons → activate tab + scroll
-function goTab(id) {
-  switchTab(id);
-  const target = document.getElementById('sluzby');
-  if (!target) return;
-  const top = target.getBoundingClientRect().top + window.scrollY - 70;
-  window.scrollTo({ top, behavior: 'smooth' });
-}
+    // ── Scroll reveal (single IntersectionObserver)
+    const revObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('on');
+          revObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -36px 0px' });
 
-// ── FAQ accordion
-function toggleFaq(btn) {
-  const item = btn.closest('.faq-item');
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(el => {
-    el.classList.remove('open');
-    el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-  });
-  if (!isOpen) {
-    item.classList.add('open');
-    btn.setAttribute('aria-expanded', 'true');
-  }
-}
+    document.querySelectorAll('.reveal, .reveal-l, .reveal-r, .step').forEach(el => revObs.observe(el));
 
-// ── Form
-function handleForm(e) {
-  e.preventDefault();
-  const btn = document.getElementById('fsub');
-  const ok  = document.getElementById('fok');
-  btn.disabled = true;
-  btn.textContent = 'Odosielam...';
-  setTimeout(() => {
-    btn.style.display = 'none';
-    ok.style.display = 'block';
-    e.target.reset();
-  }, 900);
-}
+    // ── Service tabs
+    function switchTab(id) {
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      const btn = document.getElementById('tab-' + id);
+      const panel = document.getElementById('panel-' + id);
+      if (btn) { btn.classList.add('active'); btn.setAttribute('aria-selected', 'true'); }
+      if (panel) panel.classList.add('active');
+    }
 
-// ── Smooth anchor scroll (for all # links)
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', function(e) {
-    const id = this.getAttribute('href');
-    if (id === '#') return;
-    const t = document.querySelector(id);
-    if (!t) return;
-    e.preventDefault();
-    const top = t.getBoundingClientRect().top + window.scrollY - 70;
-    window.scrollTo({ top, behavior: 'smooth' });
-    if (menuOpen) closeMenu();
-  });
-});
-</script>
+    // Hero category buttons → activate tab + scroll
+    function goTab(id) {
+      switchTab(id);
+      const target = document.getElementById('sluzby');
+      if (!target) return;
+      const top = target.getBoundingClientRect().top + window.scrollY - 70;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+
+    // ── FAQ accordion
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // ── Form
+    function handleForm(e) {
+      e.preventDefault();
+      const btn = document.getElementById('fsub');
+      const ok = document.getElementById('fok');
+      btn.disabled = true;
+      btn.textContent = 'Odosielam...';
+      setTimeout(() => {
+        btn.style.display = 'none';
+        ok.style.display = 'block';
+        e.target.reset();
+      }, 900);
+    }
+
+    // ── Smooth anchor scroll (for all # links)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
+        const id = this.getAttribute('href');
+        if (id === '#') return;
+        const t = document.querySelector(id);
+        if (!t) return;
+        e.preventDefault();
+        const top = t.getBoundingClientRect().top + window.scrollY - 70;
+        window.scrollTo({ top, behavior: 'smooth' });
+        if (menuOpen) closeMenu();
+      });
+    });
+  </script>
 </body>
+
 </html>
